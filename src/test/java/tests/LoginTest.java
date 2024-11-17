@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.annotations.Test;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -9,7 +10,7 @@ import pages.LoginPage;
 @Listeners(Listener.class)
 public class LoginTest extends BaseClass {
 
-	@Test
+	@Test(groups = {"sanity"}, description = "This is login success test")
 	public void TC01_LoginSuccessTest() {
 		LoginPage lp = new LoginPage();
 		HomePage hp = new HomePage();
@@ -17,7 +18,7 @@ public class LoginTest extends BaseClass {
 		hp.verifyHomePage();
 	}
 
-	@Test
+	@Test(groups = {"sanity"}, description = "This is login failure test")
 	public void TC02_LoginFailureTest() {
 		LoginPage lp = new LoginPage();
 		lp.loginToSwagLabs("standard_user", "secret");
