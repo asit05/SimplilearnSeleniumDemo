@@ -1,10 +1,13 @@
 package tests;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import pages.HomePage;
 import pages.LoginPage;
 
+
+@Listeners(Listener.class)
 public class HomePageTest extends BaseClass{
 
 	

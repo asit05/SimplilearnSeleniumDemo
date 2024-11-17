@@ -11,7 +11,7 @@ public class BaseClass {
 	
 	public static WebDriver driver;
 	
-	
+
 	@BeforeMethod(alwaysRun = true)
 	public void setup() {
 		driver = new FirefoxDriver();
@@ -24,6 +24,4 @@ public class BaseClass {
 	public void tearDown() {
 		driver.close();
 	}
-	
-
 }
