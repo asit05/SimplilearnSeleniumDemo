@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
-    <parameter name="Browser" value="chrome"/>
+  <test thread-count="5" parallel="methods" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="sanity"/>
+      </run>
+    </groups>
     <classes>
       <class name="tests.LoginTest">
         <methods>
           <include name="tearDown"/>
           <include name="TC02_LoginFailureTest"/>
+          <include name="CloseExcel"/>
+          <include name="SetUpExcel"/>
           <include name="setup"/>
           <include name="TC01_LoginSuccessTest"/>
-          <include name="TC03_LockedUserTest"/>
         </methods>
       </class> <!-- tests.LoginTest -->
-      <class name="tests.HomePageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="TC01_AddToCartTest"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- tests.HomePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

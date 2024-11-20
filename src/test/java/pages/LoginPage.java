@@ -10,7 +10,7 @@ import tests.BaseClass;
 
 public class LoginPage {
 	
-	WebDriver driver  = BaseClass.driver;
+	WebDriver driver;
 	
 	
 	@FindBy(id = "user-name")
@@ -25,7 +25,8 @@ public class LoginPage {
 	@FindBy(xpath = "//h3[@data-test='error']")
 	WebElement errorText;
 	
-	public LoginPage() {
+	public LoginPage(WebDriver driver) {
+		this.driver= driver;
 		PageFactory.initElements(driver, this);
 	}
 	

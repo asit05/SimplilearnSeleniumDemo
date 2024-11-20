@@ -11,9 +11,10 @@ import tests.BaseClass;
 
 public class HomePage {
 
-	WebDriver driver = BaseClass.driver;
+	WebDriver driver;
 
-	public HomePage() {
+	public HomePage(WebDriver driver) {
+		this.driver= driver;
 		PageFactory.initElements(driver, this);
 	}
 

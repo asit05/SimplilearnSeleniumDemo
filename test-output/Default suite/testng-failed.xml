@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.HomePageTest">
+      <class name="grid.SeleniumGridExample">
         <methods>
-          <include name="tearDown"/>
-          <include name="TC01_AddToCartTest"/>
-          <include name="setup"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- tests.HomePageTest -->
+      </class> <!-- grid.SeleniumGridExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
