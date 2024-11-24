@@ -63,7 +63,7 @@ public class BaseClass {
 			URL hub = new URL("http://localhost:4444/");
 			driver = new RemoteWebDriver(hub, cap);
 		} else {
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 		}
 
 		SetDriver(driver);
